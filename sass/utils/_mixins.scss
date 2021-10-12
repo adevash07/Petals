@@ -1,0 +1,36 @@
+@use "./variables" as *;
+@mixin btn {
+  padding: 1rem 5rem;
+  font-size: $fontbtn;
+  border: none;
+  outline: none;
+  border-radius: 4rem;
+}
+
+@mixin btn-grad {
+  background: linear-gradient(to right, rgba(255, 215, 0, 0.7), goldenrod);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@mixin brown {
+  @include btn;
+  font-size: 1.4rem;
+  border-radius: unset;
+  background-color: transparent;
+  border: 1px solid $brownishDark;
+  color: $brownishDark;
+  padding-left: 3rem;
+}
+
+@mixin arrow {
+  content: "";
+  border: solid $brownishDark;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
